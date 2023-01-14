@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="">
+    <div class="container" style="max-width: 936px;">
+        <!--modal-->
+        <form class="form-group">
+            <!--header-->
+            <div class="row bg-light rounded-top border">
+                <div class="col-12">
+                    <h1>Payment form example</h1>
+                </div>
+            </div>
+            <!--body-->
+            <div class="row p-3 border">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col12 alert alert-danger" role="alert">
+                            <label> Some fields are missing</label>
+                        </div>
+                    </div><!--alarm-->
+                    <div class="row">
+                        <div class="col-5 d-flex flex-column ps-0">
+                            <label for="card_number">Card #</label>
+                            <input type="text" name="card_number" placeholder="xxxxxxxxxxxxxxxx" required minlength="16" maxlength="16"></div>
+                        <div class="col-3 d-flex flex-column">
+                            <label for="card_cvc">CVC #</label>
+                            <input type="text" name="card_number" placeholder="0000" required minlength="3" maxlength="4"></div>
+                        <div class="col-4 d-flex flex-column pe-0">
+                            <div>
+                                <label for="purchase_amount">Amount</label>
+                            </div>
+                            <div class="col">
+                                <span class="font-weight-bold" >$</span> <!--No funciona-->
+                                <input class="flex-grow-1" type="text" name="purchase_amount" placeholder="Amount" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 d-flex flex-column ps-0">
+                            <label for="firstname">First Name</label>
+                            <input type="text" name="firstname" placeholder="" required></div>
+                        <div class="col-6 d-flex flex-column pe-0">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" name="lastname" placeholder=""required></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 d-flex flex-column ps-0">
+                            <label for="address_city">City</label>
+                            <input type="text" name="address_city" placeholder=""required></div>
+                        <div class="col-3 d-flex flex-column">
+                            <label for="address_state">State</label>
+                            <select name="address_state" placeholder="Pick a state" required>
+                                <option value="Pick a state">Pick a state</option>
+                                <option value="NY">New York</option>
+                                <option value="PA">Pensilvania</option>
+                                <option value="AZ">Arizona</option>
+                          </select>
+                        </div>
+                        <div class="col-3 d-flex flex-column pe-0">
+                            <label for="address_zip_code">Postal Code</label>
+                            <input type="text" name="address_zip_code" placeholder="" required></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 d-flex flex-column ps-0">
+                            <label for="payment_method">We accept:</label>
+                            <div class="d-flex justify-content-start">
+                                <div class="p-1 mb-0 bg-secondary text-white rounded-start"> 
+                                    <input type="radio" name="payment_method" value="mastercard" required/>
+                                    <label for="payment_method" class="p-1"><i class="fa-brands fa-cc-mastercard"></i></label>
+                                </div>
+                                <div class="p-1 mb-0 bg-secondary text-white"> 
+                                    <input type="radio" name="payment_method" value="visa" required/>
+                                    <label for="payment_method" class="p-1"><i class="fa-brands fa-cc-visa"></i></label>
+                                </div>
+                                <div class="p-1 mb-0 bg-secondary text-white"> 
+                                    <input type="radio" name="payment_method" value="card" required/>
+                                    <label for="payment_method"class="p-1"><i class="fa-brands fa-cc-discover"></i></label>
+                                </div>
+                                <div class="p-1 mb-0 bg-secondary text-white rounded-end">    
+                                    <input type="radio" name="payment_method" value="american_express" required/>
+                                    <label for="payment_method"class="p-1"><i class="fa-brands fa-cc-amex"></i></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 -flex flex-column pe-0">
+                            <div><label for="message">Message</label></div>
+                            <div><textarea name="message" class="w-100"></textarea></div>
+                            <div><small>Add any notes here.</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--footer-->
+            <div class="row bg-light rounded-bottom border p-2"> 
+                <div class="col d-flex justify-content-end pe-0">
+                    <button type="button" class="btn btn-secondary">Cancel</button>
+                    <button type="button" class="btn btn-primary ms-1">Send</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
